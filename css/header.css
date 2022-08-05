@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  scroll-behavior: smooth;
+  background-color: #01050E;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes up-down {
+  from {
+    transform: translatey(0px);
+  }
+  to {
+    transform: translatey(-20px);
+  }
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0E252D;
+  font-family: "Song Myung", serif;
+  padding: 16px 32px 16px;
+}
+.header .header_donga .btn_donga {
+  position: absolute;
+  top: 29px;
+  left: 27px;
+  cursor: pointer;
+}
+.header .header_donga .btn_original {
+  position: absolute;
+  top: 25px;
+  left: 129px;
+  cursor: pointer;
+}
+.header .header_share .btn_share {
+  padding-right: 20px;
+  cursor: pointer;
+}
+.header .header_share .btn_reply {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=header.css.map */

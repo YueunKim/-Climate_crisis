@@ -1,0 +1,53 @@
+@import './default.scss';
+
+.intro {
+    font-family: 'Song Myung', serif;
+
+    .intro_bg {
+        .intro_first_bg{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .intro_text {
+        position: absolute;
+        max-width: 600px;
+        margin: 0 auto;
+        top: 37%;
+        left: 15%;
+        text-align: center;
+        color: $white-color;
+        font-family: 'Song Myung', serif;
+
+        .intro_tit {
+            @include animation;
+
+            h1{
+                font-size: 6em;
+                font-weight: 500;
+            }
+        }
+        
+        .intro_sub {
+            @include animation;
+            
+            p {
+                font-size: 2em;
+                font-weight: 500;
+                margin-top: 5%;
+            }
+        }
+    }
+
+    .icon_scroll {
+        @include animation;
+        position: absolute;
+        left: 50%;
+        bottom: 5%;
+        display: block;
+        width: 18px;
+        height: 56px;
+        animation: up-down 0.5s infinite ease-in-out alternate;
+    }
+}

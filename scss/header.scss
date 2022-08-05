@@ -1,0 +1,35 @@
+@import './default.scss';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:$head-color;
+    font-family: 'Song Myung', serif;
+    padding: 16px 32px 16px;
+
+    .header_donga {
+        .btn_donga {
+            position: absolute;
+            top: 29px;
+            left: 27px;
+            cursor: pointer;
+        } 
+        .btn_original {
+            position: absolute;
+            top: 25px;
+            left: 129px;
+            cursor: pointer;
+        } 
+    }
+
+    .header_share {
+        .btn_share {
+            padding-right: 20px;
+            cursor: pointer;
+        }
+        .btn_reply {
+            cursor: pointer;;
+        }
+    }
+}

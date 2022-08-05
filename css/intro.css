@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  scroll-behavior: smooth;
+  background-color: #01050E;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes up-down {
+  from {
+    transform: translatey(0px);
+  }
+  to {
+    transform: translatey(-20px);
+  }
+}
+.intro {
+  font-family: "Song Myung", serif;
+}
+.intro .intro_bg .intro_first_bg {
+  width: 100%;
+  height: auto;
+}
+.intro .intro_text {
+  position: absolute;
+  max-width: 600px;
+  margin: 0 auto;
+  top: 37%;
+  left: 15%;
+  text-align: center;
+  color: rgb(242, 241, 241);
+  font-family: "Song Myung", serif;
+}
+.intro .intro_text .intro_tit {
+  animation: fadein 5s;
+  -moz-animation: fadein 5s; /* Firefox */
+  -webkit-animation: fadein 5s; /* Safari and Chrome */
+  -o-animation: fadein 5s; /* Opera */
+}
+.intro .intro_text .intro_tit h1 {
+  font-size: 6em;
+  font-weight: 500;
+}
+.intro .intro_text .intro_sub {
+  animation: fadein 5s;
+  -moz-animation: fadein 5s; /* Firefox */
+  -webkit-animation: fadein 5s; /* Safari and Chrome */
+  -o-animation: fadein 5s; /* Opera */
+}
+.intro .intro_text .intro_sub p {
+  font-size: 2em;
+  font-weight: 500;
+  margin-top: 5%;
+}
+.intro .icon_scroll {
+  animation: fadein 5s;
+  -moz-animation: fadein 5s; /* Firefox */
+  -webkit-animation: fadein 5s; /* Safari and Chrome */
+  -o-animation: fadein 5s; /* Opera */
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  display: block;
+  width: 18px;
+  height: 56px;
+  animation: up-down 0.5s infinite ease-in-out alternate;
+}
+
+/*# sourceMappingURL=intro.css.map */

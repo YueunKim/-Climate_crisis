@@ -1,0 +1,33 @@
+@import './default.scss';
+
+.main1 {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top: 5em;
+    
+    .global-width {
+        max-width: 55%;
+        margin: 0 auto;
+        padding: 3rem;
+        margin-top: 10%;
+    }
+
+        .video {
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        .article_txt{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            // margin-top: 5em;
+            color: $white-color;
+            font-size: 20px;
+
+            p {
+                margin-bottom: 1em;
+            }
+        }
+
+}
