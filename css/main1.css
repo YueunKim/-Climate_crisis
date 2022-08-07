@@ -10,6 +10,13 @@ body {
   background-color: #01050E;
 }
 
+.global-width {
+  max-width: 55%;
+  margin: 0 auto;
+  padding: 3rem;
+  margin-top: 10%;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
@@ -54,12 +61,6 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   margin-top: 5em;
 }
-.main1 .global-width {
-  max-width: 55%;
-  margin: 0 auto;
-  padding: 3rem;
-  margin-top: 10%;
-}
 .main1 .video {
   margin-top: 5%;
   margin-bottom: 5%;
@@ -74,6 +75,11 @@ body {
 }
 .main1 .article_txt p {
   margin-bottom: 1em;
+}
+.main1 .article_txt .txt_up p {
+  font-size: 4rem;
+  margin-top: 50%;
+  margin-bottom: 50%;
 }
 
 /*# sourceMappingURL=main1.css.map */

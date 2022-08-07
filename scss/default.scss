@@ -1,5 +1,6 @@
 $head-color: #0E252D;
 $white-color: rgb(242, 241, 241);
+$blue-color: #778E88;
 $bg-color: #01050E;
 * {
     padding:0;
@@ -11,6 +12,13 @@ body{
     height: 100vh;
     scroll-behavior: smooth;
     background-color: $bg-color;
+}
+
+.global-width {
+    max-width: 55%;
+    margin: 0 auto;
+    padding: 3rem;
+    margin-top: 10%;
 }
 
 @keyframes fadein {

@@ -10,6 +10,13 @@ body {
   background-color: #01050E;
 }
 
+.global-width {
+  max-width: 55%;
+  margin: 0 auto;
+  padding: 3rem;
+  margin-top: 10%;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
@@ -65,7 +72,6 @@ body {
   left: 15%;
   text-align: center;
   color: rgb(242, 241, 241);
-  font-family: "Song Myung", serif;
 }
 .intro .intro_text .intro_tit {
   animation: fadein 5s;

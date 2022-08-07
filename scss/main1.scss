@@ -3,13 +3,6 @@
 .main1 {
     font-family: 'Noto Sans KR', sans-serif;
     margin-top: 5em;
-    
-    .global-width {
-        max-width: 55%;
-        margin: 0 auto;
-        padding: 3rem;
-        margin-top: 10%;
-    }
 
         .video {
             margin-top: 5%;
@@ -21,12 +14,17 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            // margin-top: 5em;
             color: $white-color;
             font-size: 20px;
 
             p {
                 margin-bottom: 1em;
+            }
+
+            .txt_up p {
+                font-size: 4rem;
+                margin-top: 50%;
+                margin-bottom: 50%;
             }
         }
 

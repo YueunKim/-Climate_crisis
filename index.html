@@ -8,10 +8,18 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/intro.css">
     <link rel="stylesheet" href="./css/main1.css">
-
+    <link rel="stylesheet" href="./css/main2.css">
+    <link rel="stylesheet" href="./css/main3.css">
+    <link rel="stylesheet" href="./css/last.css">
     <script src="main.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://unpkg.com/typeit@8.6.0/dist/index.umd.js"></script>
+
     <title>기후위기</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Song+Myung&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -49,19 +57,16 @@
                     다음은?
                 </p>
             </div>
-
         </div>
+
         <span class="icon_scroll">
             <img src="image/icon_scroll.png" alt="scroll">
         </span>
     </section>
 
-    <!-- Main -->
-    <section class="main">
-
+    <section class="global-width">
         <!-- Main1 -->
         <section class="main1">
-            <div class="global-width">
                 <div class="article_txt">
                     <p>
                         지난 6월 5일, 서울 시청역 인근 건물 옥상 전광판에 대형 북극곰이 등장했다.
@@ -80,13 +85,132 @@
                     <p>
                         어릴 때부터 들어온 지구 온난화 이야기.. 북극 빙하가 녹는다는 이야기..
                     </p>
-                <div>
-                
+                    <div class="txt_up" data-aos="fade-up">
+                        <p>
+                            당신과는 먼 이야기로 느껴지나요?
+                        </p>
+                    </div>
+                    
+                </div>
+        </section>
 
+        <!-- Main2 -->
+        <section class="main2">
+            <!-- 녹아내린 빙하에 숨진 관광객 -->
+            <div class="main2_1">
+                <h1 class="main2_tit" data-aos="fade-up">
+                    <span class="text-wrapper">
+                        <span class="letters">녹아내린 빙하에 숨진 관광객</span>
+                        <span class="line line2"></span>
+                    </span>
+                </h1>
+                <div class="main2_img"><img src="./image/main2_1.PNG" width="100%" height="100%" alt="the original"></div>
+                <div class="article_txt">
+                    <p>
+                        이탈리아 북부 돌로미티 산맥의 최고봉인 해발 3343m 마르몰라다 정상 인근에서 빙하 덩어리가 떨어져 등산객들을 덮쳤습니다.
+                    </p>
+                    <p>
+                        AFP통신 등 외신들에 따르면 이번 참사가 만년설이 있던 마르몰라다 정상부 기온이 영상 10도까지 오른 뒤 하루 만에 발생했다며 지구 온난화에 따른 것으로 보고 있습니다.
+                    </p>
+                </div>
             </div>
             
+            <!-- 이상 고온과 대규모 산불 -->
+            <div class="main2_2">
+                <h1 class="main2_tit" data-aos="fade-up">
+                    <span class="text-wrapper">
+                        <span class="letters">이상 고온과 대규모 산불</span>
+                        <span class="line line2"></span>
+                    </span>
+                </h1>
+                <div class="main2_img"><img src="./image/main2_2.PNG" width="100%" height="100%" alt="the original"></div>
+                <div class="article_txt">
+                    <p>
+                        45도 이상 치솟은 포르투갈과 스페인에선 열사병 등에 의해 2100명 이상이 숨졌습니다.
+                    </p>
+                    <p>
+                        불볕 더위에 건조한 날씨가 이어지면서 대형 산불도 잇따르고 있습니다.
+                    </p>
+                    <p>
+                        프랑스는 수도 파리 면적의 2배가 넘는 4만ha, 이탈리아 2만7000ha 등 엄청난 규모의 산불이 유럽 대부분 지역을 휩쓸고 있습니다.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 불볕더위에 녹는 채소 -->
+            <div class="main2_3">
+                <h1 class="main2_tit" data-aos="fade-up">
+                    <span class="text-wrapper">
+                        <span class="letters">불볕더위에 녹는 채소</span>
+                        <span class="line line2"></span>
+                    </span>
+                </h1>
+                <div class="main2_img"><img src="./image/main2_3.PNG" width="100%" height="100%" alt="the original"></div>
+                <div class="article_txt">
+                    <p>
+                        엎친 데 덮친 격으로 다음 달 배추 출하량은 평년보다 7% 줄어들 것으로 보입니다.
+                    </p>
+                    <p>
+                        7월 초 기온이 평년보다 4도 이상 오르면서 배추가 흐물흐물해지는 등 썩는 배추가 많이 나왔기 때문입니다.
+                    </p>
+                    <p>
+                        절절 끊는 폭염에 한반도가 아열대 기후가 되면서 가을 김장철 배추 대란 우려도 커지고 있습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main3 -->
+        <section class="main3">
+            <div class="scroll-graphic">
+                <div class="graphic-item"><img class="scene-img" width="100%" height="100%" src="./image/1.jpg" alt=""></div>
+                <div class="graphic-item"><img class="scene-img" width="100%" height="100%" src="./image/2.jpg"  alt=""></div>
+                <div class="graphic-item"><img class="scene-img" width="100%" height="100%" src="./image/3.jpg" alt=""></div>
+                <div class="graphic-item"><img class="scene-img" width="100%" height="100%" src="./image/4.jpg" alt=""></div>
+                <div class="graphic-item"><img class="scene-img" width="100%" height="100%" src="./image/5.jpg" alt=""></div>
+            </div>
+
+            <div class="scroll-txt">
+                <div class="step">
+                    <p>
+                        지난 7월 18일, 안토니우 구테흐스 유엔 사무총장은 이렇게 말했다.
+                    </p>
+                </div>
+                <div class="step">
+                    <p>
+                        "우리에겐 두 가지 선택권이 있다. 집단행동이나 집단자살"
+                    </p>
+                </div>
+                <div class="step">
+                    <p>
+                        "이는 우리 손에 달렸다"
+                    </p>
+                </div>
+                <div class="step">
+                    <p>
+                        "인류의 절반이 홍수나 가뭄, 극단적인 폭풍, 산불의 위험지역에 살고 있다"
+                    </p>
+                </div>
+                <div class="step">
+                    <p>
+                        "나를 가장 불안하게 하는 것은 우리가 전 세계적인 기후위기에 직면했는데도<br>다자공동체로서 대응을 못 하고 있다는 것이다"
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Last -->
+        <section class="last">
+            <div class="container">
+                <h1 id="last_txt"></h1>
+            </div>
         </section>
     </section>
-    
+    <script>
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 3000
+        });
+    </script> 
 </body>
 </html>

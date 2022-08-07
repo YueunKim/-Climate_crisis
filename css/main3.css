@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  scroll-behavior: smooth;
+  background-color: #01050E;
+}
+
+.global-width {
+  max-width: 55%;
+  margin: 0 auto;
+  padding: 3rem;
+  margin-top: 10%;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes up-down {
+  from {
+    transform: translatey(0px);
+  }
+  to {
+    transform: translatey(-20px);
+  }
+}
+.main3 .scroll-graphic {
+  position: sticky;
+  top: 15%;
+  height: 100vh;
+}
+.main3 .scroll-graphic .graphic-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: 1s;
+}
+.main3 .scroll-graphic .visible {
+  opacity: 1;
+}
+.main3 .scroll-graphic .scene-img {
+  opacity: 0.7;
+  max-height: 100vh;
+}
+.main3 .scroll-txt {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  color: rgb(242, 241, 241);
+  position: relative;
+}
+.main3 .scroll-txt .step {
+  text-align: center;
+  background-color: #01050E;
+  padding: 2.5rem;
+  margin-bottom: 100vh;
+  box-shadow: black 0 0 3px;
+}
+
+/*# sourceMappingURL=main3.css.map */

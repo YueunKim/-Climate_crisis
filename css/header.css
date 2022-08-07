@@ -10,6 +10,13 @@ body {
   background-color: #01050E;
 }
 
+.global-width {
+  max-width: 55%;
+  margin: 0 auto;
+  padding: 3rem;
+  margin-top: 10%;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
