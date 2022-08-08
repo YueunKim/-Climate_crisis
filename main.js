@@ -49,40 +49,21 @@
         let step;
         let boundingRect;
 
-        for (let i = ioIndex-1; i < ioIndex+2; i++){
+        for (let i = ioIndex-1; i < ioIndex+3; i++){
             step = stepElems[i];
             if (!step) continue;
             boundingRect = step.getBoundingClientRect();
 
-            if (boundingRect.top > window.innerHeight * 0.5 && 
+            if (boundingRect.top > window.innerHeight * 0.1 && 
                 boundingRect.top < window.innerHeight * 0.8) {
                 
-                if (currentItem) inactivate();
+                inactivate();
 
                 currentItem = graphicElems[step.dataset.index];
                 activate();
             }
         }
     });
-
-    //main3 마지막 문구 타이핑
-    document.addEventListener('DOMContentLoaded',() => {
-        new TypeIt('.last #last_txt', {
-            speed: 200,
-            // waitUntilVisible: true,
-            // loop: true,
-            // breakLines: false
-        })
-        .type("당장 행동하지 않으면 다 같이 죽는다", {delay:1000})
-        .move(-10)
-        .delete(4, {delay:1000})
-        .move(+9)
-        .delete(2, {delay:1000})
-        .type("살 수 있")
-        .move(+1)
-        .go();  
-    })
-
 })();
 
 
