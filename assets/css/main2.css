@@ -72,7 +72,24 @@ body {
   position: relative;
   font-weight: 300;
   font-size: 4.5em;
-  color: #778E88;
+}
+.main2_1 .main2_tit #t1, .main2_2 .main2_tit #t1, .main2_3 .main2_tit #t1 {
+  color: #ACC1D3;
+}
+.main2_1 .main2_tit #l1, .main2_2 .main2_tit #l1, .main2_3 .main2_tit #l1 {
+  background-color: #ACC1D3;
+}
+.main2_1 .main2_tit #t2, .main2_2 .main2_tit #t2, .main2_3 .main2_tit #t2 {
+  color: #E6712E;
+}
+.main2_1 .main2_tit #l2, .main2_2 .main2_tit #l2, .main2_3 .main2_tit #l2 {
+  background-color: #E6712E;
+}
+.main2_1 .main2_tit #t3, .main2_2 .main2_tit #t3, .main2_3 .main2_tit #t3 {
+  color: #9BAA57;
+}
+.main2_1 .main2_tit #l3, .main2_2 .main2_tit #l3, .main2_3 .main2_tit #l3 {
+  background-color: #9BAA57;
 }
 .main2_1 .main2_tit .text-wrapper, .main2_2 .main2_tit .text-wrapper, .main2_3 .main2_tit .text-wrapper {
   position: relative;
@@ -90,7 +107,6 @@ body {
   margin: auto;
   height: 3px;
   width: 100%;
-  background-color: #778E88;
   transform-origin: 0.5 0;
 }
 .main2_1 .main2_tit .letters, .main2_2 .main2_tit .letters, .main2_3 .main2_tit .letters {

@@ -72,6 +72,9 @@ body {
   left: 15%;
   text-align: center;
   color: rgb(242, 241, 241);
+  animation-duration: 5s;
+  animation-name: disappear;
+  animation-fill-mode: forwards;
 }
 .intro .intro_text .intro_tit {
   animation: fadein 5s;
@@ -95,10 +98,6 @@ body {
   margin-top: 5%;
 }
 .intro .icon_scroll {
-  animation: fadein 5s;
-  -moz-animation: fadein 5s; /* Firefox */
-  -webkit-animation: fadein 5s; /* Safari and Chrome */
-  -o-animation: fadein 5s; /* Opera */
   position: absolute;
   left: 50%;
   bottom: 5%;

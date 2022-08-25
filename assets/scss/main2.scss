@@ -16,7 +16,31 @@
         position: relative;
         font-weight: 300;
         font-size: 4.5em;
-        color: $blue-color;
+        // color: $blue-color;
+
+        #t1 {
+            color: #ACC1D3;
+        }
+
+        #l1 {
+            background-color: #ACC1D3;
+        }
+
+        #t2 {
+            color: #E6712E;
+        }
+
+        #l2 {
+            background-color: #E6712E;
+        }
+
+        #t3 {
+            color: #9BAA57;
+        }
+
+        #l3 {
+            background-color: #9BAA57;
+        }
     }
 
     .main2_tit .text-wrapper {
@@ -36,8 +60,9 @@
         margin: auto;
         height: 3px;
         width: 100%;
-        background-color: $blue-color;
+        // background-color: $blue-color;
         transform-origin: 0.5 0;
+
     }
 
     .main2_tit .letters {
@@ -45,6 +70,10 @@
         display: inline-block;
         opacity: 0;
         transition: all .5s ease;
+
+        // .t1{
+        //     color: skyblue;
+        // }
     }
 
     .main2_tit .letters .up {

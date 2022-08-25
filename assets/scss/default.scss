@@ -54,7 +54,7 @@ body{
     }
 }
 
-@mixin animation {
+@mixin animation_in {
     animation: fadein 5s;
     -moz-animation: fadein 5s; /* Firefox */
     -webkit-animation: fadein 5s; /* Safari and Chrome */
