@@ -1,7 +1,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -25,14 +26,6 @@ body {
     opacity: 1;
   }
 }
-@-moz-keyframes fadein { /* Firefox */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @-webkit-keyframes fadein { /* Safari and Chrome */
   from {
     opacity: 0;
@@ -41,27 +34,40 @@ body {
     opacity: 1;
   }
 }
-@-o-keyframes fadein { /* Opera */
+@-webkit-keyframes up-down {
   from {
-    opacity: 0;
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
   }
   to {
-    opacity: 1;
+    -webkit-transform: translatey(-20px);
+            transform: translatey(-20px);
   }
 }
 @keyframes up-down {
   from {
-    transform: translatey(0px);
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
   }
   to {
-    transform: translatey(-20px);
+    -webkit-transform: translatey(-20px);
+            transform: translatey(-20px);
   }
 }
 .main2_1, .main2_2, .main2_3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 20%;
 }
 .main2_1 .main2_img, .main2_2 .main2_img, .main2_3 .main2_img {
@@ -107,16 +113,19 @@ body {
   margin: auto;
   height: 3px;
   width: 100%;
-  transform-origin: 0.5 0;
+  -webkit-transform-origin: 0.5 0;
+          transform-origin: 0.5 0;
 }
 .main2_1 .main2_tit .letters, .main2_2 .main2_tit .letters, .main2_3 .main2_tit .letters {
   font-family: "Song Myung", serif;
   display: inline-block;
   opacity: 0;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .main2_1 .main2_tit .letters .up, .main2_2 .main2_tit .letters .up, .main2_3 .main2_tit .letters .up {
-  transform: translate(0, 100px);
+  -webkit-transform: translate(0, 100px);
+          transform: translate(0, 100px);
 }
 .main2_1 .article_txt, .main2_2 .article_txt, .main2_3 .article_txt {
   color: rgb(242, 241, 241);
@@ -125,5 +134,3 @@ body {
 .main2_1 .article_txt p, .main2_2 .article_txt p, .main2_3 .article_txt p {
   margin-bottom: 1em;
 }
-
-/*# sourceMappingURL=main2.css.map */

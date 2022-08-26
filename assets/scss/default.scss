@@ -61,6 +61,34 @@ body{
     -o-animation: fadein 5s; /* Opera */
 }
 
+@keyframes fade {
+    0%,100% { opacity: 0 }
+    50% { opacity: 1 }
+}
+
+@-moz-keyframes fade { /* Firefox */
+    0%,100% { opacity: 0 }
+    50% { opacity: 1 }
+}
+
+@-webkit-keyframes fade { /* Safari and Chrome */
+    0%,100% { opacity: 0 }
+    50% { opacity: 1 }
+}
+
+@-o-keyframes fade { /* Opera */
+    0%,100% { opacity: 0 }
+    50% { opacity: 1 }
+}
+
+@mixin animation_fade {
+    animation: fade 5s linear;
+    -moz-animation: fade 5s linear; /* Firefox */
+    -webkit-animation: fade 5s linear; /* Safari and Chrome */
+    -o-animation: fade 5s linear; /* Opera */
+}
+
+
 @keyframes up-down{
     from{
         transform: translatey(0px);

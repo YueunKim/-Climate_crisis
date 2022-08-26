@@ -21,11 +21,20 @@
                 margin-bottom: 1em;
             }
 
-            .txt_up p {
-                font-size: 4rem;
+            .txt_up {
+                opacity: 0;
+                font-size: 3.5rem;
                 margin-top: 50%;
                 margin-bottom: 50%;
+                transform: translatey(100px);
+                transition: all 2s;
+                // position: absolute;
             }
+
+            // .up {
+            //     opacity: 1;
+            
+            // }
         }
 
 }

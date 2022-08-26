@@ -19,12 +19,9 @@
         text-align: center;
         color: $white-color;
 
-        animation-duration: 5s;
-        animation-name: disappear;
-        animation-fill-mode: forwards;
-
         .intro_tit {
-            @include animation_in;
+            @include animation_fade;
+            opacity: 0;
             h1{
                 font-size: 6em;
                 font-weight: 500;
@@ -32,7 +29,8 @@
         }
         
         .intro_sub {
-            @include animation_in;
+            @include animation_fade;
+            opacity: 0;
             p {
                 font-size: 2em;
                 font-weight: 500;
@@ -42,7 +40,6 @@
     }
 
     .icon_scroll {
-        // @include animation_in;
         position: absolute;
         left: 50%;
         bottom: 5%;

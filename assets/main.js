@@ -45,7 +45,19 @@
         currentItem.classList.remove('visible');
     }
 
+
+
+    //스크롤 할 때
     window.addEventListener('scroll', () => {
+
+        //main1 글자 올라오기
+        const txtupElem = document.querySelector('.txt_up');
+        let eleOffset = txtupElem.getBoundingClientRect().top + window.pageYOffset - 800;
+        txtupElem.style.cssText = ( window.scrollY > eleOffset
+            ? 'opacity:1; transform: translateY(0);'
+            : 'opacity:0; transform: translateY(100px);' )
+
+        //main3 
         let step;
         let boundingRect;
 
