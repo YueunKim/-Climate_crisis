@@ -20,17 +20,17 @@
         color: $white-color;
 
         .intro_tit {
-            @include animation_fade;
-            opacity: 0;
+            // @include animation_out;
+            // opacity: 0;
             h1{
-                font-size: 6em;
+                font-size: 5.5em;
                 font-weight: 500;
             }
         }
         
         .intro_sub {
-            @include animation_fade;
-            opacity: 0;
+            // @include animation_out;
+            // opacity: 0;
             p {
                 font-size: 2em;
                 font-weight: 500;
@@ -43,9 +43,57 @@
         position: absolute;
         left: 50%;
         bottom: 5%;
-        display: block;
+        // display: block;
         width: 18px;
         height: 56px;
         animation: up-down 0.5s infinite ease-in-out alternate;
+        opacity: 0;
+        transition: all 0.5s;
     }
+
+// 날아가는 효과
+    span {
+        display: inline-block;
+        text-shadow: 0 0 0 whitesmoke;
+        animation: smoky 2s 1s both;
+    }
+    
+    span:nth-child(even){
+        animation-name: smoky-mirror;
+    }
+
+    @keyframes smoky {
+        60% {
+        text-shadow: 0 0 40px whitesmoke;
+        }
+        to {
+        transform:
+            translate3d(15rem,-8rem,0)
+            rotate(-50deg)
+            skewX(50deg)
+            scale(2.5);
+        text-shadow: 0 0 20px whitesmoke;
+        opacity: 0;
+        }
+    }
+    
+    @keyframes smoky-mirror {
+        60% {
+        text-shadow: 0 0 40px whitesmoke; }
+        to {
+        transform:
+            translate3d(18rem,-8rem,0)
+            rotate(-50deg) 
+            skewX(-50deg)
+            scale(2);
+        text-shadow: 0 0 20px whitesmoke;
+        opacity: 0;
+        }
+    }
+    
+    @for $item from 1 through 25 {
+        span:nth-of-type(#{$item}){ 
+        animation-delay: #{(3 + ($item/10))}s; 
+        }
+    } 
 }

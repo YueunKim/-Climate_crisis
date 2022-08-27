@@ -70,41 +70,16 @@ body {
             transform: translatey(-20px);
   }
 }
-.main1 {
-  font-family: "Noto Sans KR", sans-serif;
-  margin-top: 5em;
-}
-.main1 .video {
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-.main1 .article_txt {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: rgb(242, 241, 241);
-  font-size: 20px;
-}
-.main1 .article_txt p {
-  margin-bottom: 1em;
-}
-.main1 .article_txt .txt_up {
-  opacity: 0;
+.main4 .container {
+  position: relative;
+  text-align: center;
+  font-family: "Song Myung", serif;
   font-size: 3.5rem;
-  margin-top: 30%;
-  margin-bottom: 80%;
-  -webkit-transform: translatey(100px);
-          transform: translatey(100px);
-  -webkit-transition: all 2s;
-  transition: all 2s;
+  color: rgb(242, 241, 241);
+  margin-top: 20%;
+  margin-bottom: 50%;
+  -webkit-transform: translatey(10px);
+          transform: translatey(10px);
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }

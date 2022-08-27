@@ -1,25 +1,4 @@
 (() => {
-    //main2 제목
-    anime.timeline()
-    .add({
-        targets: '.main2_tit .line',
-        opacity: [0.5,1],
-        scaleX: [0, 1],
-        easing: "easeInOutExpo",
-        duration: 1000
-    }).add({
-        targets: '.main2_tit .line',
-        duration: 1000,
-        easing: "easeOutExpo",
-        translateY: (el, i) => (-0.625 + 0.625*2) + "em"
-    }).add({
-        targets: '.main2_tit .letters',
-        opacity: [0,1],
-        translateX: [0, 0],
-        easing: "easeOutExpo",
-        duration: 600,
-        offset: '-=900'
-    });
 
     //main3 사진에 따라 텍스트 올라오기
     const stepElems = document.querySelectorAll('.step');
@@ -46,16 +25,89 @@
     }
 
 
+    // //main4
+    // function type() {
+    //     document.addEventListener('DOMContentLoaded',() => {
+    //         new TypeIt('.main4 #last_txt', {
+    //             speed: 200
+    //         })
+    //         .type("당장 행동하지 않으면 다 같이 죽는다", {delay:1000})
+    //         .move(-10)
+    //         .delete(4, {delay:1000})
+    //         .move(+9)
+    //         .delete(2, {delay:1000})
+    //         .type("살 수 있")
+    //         .move(+1)
+    //         .go();
+    //     })
+    // };
+
+
+        //main4
+        // function type() {
+        //     new TypeIt('.main4 #last_txt', {
+        //         speed: 200
+        //     })
+        //     .type("당장 행동하지 않으면 다 같이 죽는다", {delay:1000})
+        //     .move(-10)
+        //     .delete(4, {delay:1000})
+        //     .move(+9)
+        //     .delete(2, {delay:1000})
+        //     .type("살 수 있")
+        //     .move(+1)
+        //     .go();
+        // };
+    
+        //main4
+        function type() {
+            new TypeIt('#last_txt', {
+                speed: 200
+            })
+            .type("text text text", {delay:1000})
+            .move(-10)
+            .delete(4, {delay:1000})
+            .move(+9)
+            .delete(2, {delay:1000})
+            .type("abc")
+            .move(+1)
+            .go();
+        };
+
 
     //스크롤 할 때
     window.addEventListener('scroll', () => {
 
+        //intro 마우스 사라지기
+        const iconScrollElem = document.querySelector('.icon_scroll');
+        const iconScrollOffset = iconScrollElem.getBoundingClientRect().top;
+        iconScrollElem.style.cssText = ( window.scrollY > iconScrollOffset
+            ? 'opacity:0; transform: translateY(100);'
+            : 'opacity:1; transform: translateY(0px);' );
+        
+
         //main1 글자 올라오기
         const txtupElem = document.querySelector('.txt_up');
-        let eleOffset = txtupElem.getBoundingClientRect().top + window.pageYOffset - 800;
-        txtupElem.style.cssText = ( window.scrollY > eleOffset
-            ? 'opacity:1; transform: translateY(0);'
-            : 'opacity:0; transform: translateY(100px);' )
+        const txtupOffset = txtupElem.getBoundingClientRect().top + window.pageYOffset - 800;
+        txtupElem.style.cssText = ( window.scrollY > txtupOffset
+            ? 'opacity:1; transform: translatey(0px);'
+            : 'opacity:0; transform: translatey(100px);' );
+
+
+        //main2 타이틀 올라오기
+        const titleElem = document.querySelectorAll('.main2_tit');
+        let eleOffsetArr = [];
+
+        titleElem.forEach(e => {
+            let eleOffset = e.getBoundingClientRect().top + window.pageYOffset - 800;
+            eleOffsetArr.push(eleOffset);
+        });
+        
+        eleOffsetArr.forEach((offset, idx) => {
+            titleElem[idx].style.cssText = ( window.scrollY > offset
+                ? 'opacity:1; transform: translateX(0);'
+                : 'opacity:0; transform: translateX(50px);' );
+        });
+
 
         //main3 
         let step;
@@ -64,10 +116,10 @@
         for (let i = ioIndex-1; i < ioIndex+3; i++){
             step = stepElems[i];
             if (!step) continue;
-            boundingRect = step.getBoundingClientRect();
+            boundingRect = step.getBoundingClientRect().top;
 
-            if (boundingRect.top > window.innerHeight * 0.1 && 
-                boundingRect.top < window.innerHeight * 0.8) {
+            if (boundingRect > window.innerHeight * 0.7 && 
+                boundingRect < window.innerHeight * 0.8) {
                 
                 inactivate();
 
@@ -75,8 +127,31 @@
                 activate();
             }
         }
+
+        //main4
+        const lastElem = document.querySelector('.container');
+        const lastOffset = lastElem.getBoundingClientRect().top;
+        if (window.scrollY > lastOffset){
+            lastElem.style.cssText = 'opacity:1; transform: translateY(0);';
+            // type();
+        } else { lastElem.style.cssText = 'opacity:0; transform: translateY(50px);'}
+
+        // lastElem.style.cssText = ( window.scrollY > lastOffset
+        //     ? 'opacity:1; transform: translateY(0);'
+        //     : 'opacity:0; transform: translateY(50px);' );
+
+        // if (window.scrollY * 0.5 < lastOffset && 
+        //     window.scrollY * 0.6 > lastOffset) {
+        //     type();
+        // };
+
+        // if (window.scrollY * 0.5 === lastOffset) {
+        //     type();
+        // };
+
     });
-}) ();
+
+})();
 
 
 

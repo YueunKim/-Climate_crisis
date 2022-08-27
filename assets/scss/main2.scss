@@ -13,81 +13,37 @@
     }
     
     .main2_tit {
+        font-family: 'Song Myung', serif;
         position: relative;
         font-weight: 300;
         font-size: 4.5em;
+        transform: translatey(10px);
+        transition: all 1s;
         // color: $blue-color;
 
-        #t1 {
+        .tit1 {
             color: #ACC1D3;
+            border-bottom: 3px solid #ACC1D3;
         }
 
-        #l1 {
-            background-color: #ACC1D3;
-        }
-
-        #t2 {
+        .tit2 {
             color: #E6712E;
+            border-bottom: 3px solid #E6712E;
         }
 
-        #l2 {
-            background-color: #E6712E;
-        }
-
-        #t3 {
+        .tit3 {
             color: #9BAA57;
+            border-bottom: 3px solid #9BAA57;
         }
-
-        #l3 {
-            background-color: #9BAA57;
-        }
-    }
-
-    .main2_tit .text-wrapper {
-        position: relative;
-        display: inline-block;
-        padding-top: 0.1em;
-        padding-right: 0.05em;
-        padding-bottom: 0.15em;
-        line-height: 1em;
-    }
-
-    .main2_tit .line {
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        height: 3px;
-        width: 100%;
-        // background-color: $blue-color;
-        transform-origin: 0.5 0;
-
-    }
-
-    .main2_tit .letters {
-        font-family: 'Song Myung', serif;
-        display: inline-block;
-        opacity: 0;
-        transition: all .5s ease;
-
-        // .t1{
-        //     color: skyblue;
-        // }
-    }
-
-    .main2_tit .letters .up {
-        transform: translate(0, 100px);
     }
 
     .article_txt{
         color: $white-color;
         font-size: 20px;
+        // position: absolute;
 
         p {
             margin-bottom: 1em;
         }
     }
-
-
 }

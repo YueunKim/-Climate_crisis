@@ -1,0 +1,15 @@
+@import './default.scss';
+
+.main4 {
+    .container {
+        position: relative;
+        text-align: center;
+        font-family: 'Song Myung', serif;
+        font-size: 3.5rem;
+        color: $white-color;
+        margin-top: 20%;
+        margin-bottom: 50%;
+        transform: translatey(10px);
+        transition: all 1s;
+    }
+}

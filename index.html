@@ -10,16 +10,15 @@
     <link rel="stylesheet" href="./assets/css/main1.css">
     <link rel="stylesheet" href="./assets/css/main2.css">
     <link rel="stylesheet" href="./assets/css/main3.css">
-    <!-- <link rel="stylesheet" href="./assets/css/last.css"> -->
+    <link rel="stylesheet" href="./assets/css/main4.css">
     <script src="./assets/main.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> -->
     <script src="https://unpkg.com/typeit@8.6.0/dist/index.umd.js"></script>
 
     <title>기후위기</title>
     
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- <script>document.getElementById('v1').play();</script> -->
     
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Song+Myung&display=swap" rel="stylesheet">
 </head>
@@ -47,22 +46,20 @@
         </div>
         <div class="intro_text">
             <div class="intro_tit">
-                <a href="https://original.donga.com" class="intro_btn_original">
+                <span><a href="https://original.donga.com" class="intro_btn_original">
                     <img src="https://image.donga.com/theoriginal/jinju/images/common/tit_original02.png" alt="the original">
-                </a>
-                <h1>다 같이 죽는다</h1>
+                </a></span>
+                <h1><span>다</span><span>&nbsp;</span><span>같</span><span>이</span><span>&nbsp;</span><span>죽</span><span>는</span><span>다</span></h1>
             </div>
             <div class="intro_sub">
-                <p>녹아내린 빙하와 만년설<br>
-                    초대형 화재와 산불<br>
-                    다음은?
+                <p><span>녹</span><span>아</span><span>내</span><span>린</span><span>&nbsp;</span><span>빙</span><span>하</span><span>와</span><span>&nbsp;</span><span>만</span><span>년</span><span>설</span><br>
+                <span>다</span><span>음</span><span>은</span><span>?</span>
                 </p>
             </div>
         </div>
-
-        <span class="icon_scroll">
+        <div class="icon_scroll">
             <img src="./assets/images/icon_scroll.png" alt="scroll">
-        </span>
+        </div>
     </section>
 
     <section class="global-width">
@@ -91,20 +88,17 @@
                             아직 우리와는 먼 이야기일까?
                         </p>
                     </div>
-                    
                 </div>
+                
         </section>
 
         <!-- Main2 -->
         <section class="main2">
             <!-- 녹아내린 빙하에 숨진 관광객 -->
             <div class="main2_1">
-                <h1 class="main2_tit" data-aos="fade-up">
-                    <span class="text-wrapper">
-                        <span class="letters" id="t1">녹아내린 빙하에 숨진 관광객</span>
-                        <span class="line line2" id="l1"></span>
-                    </span>
-                </h1>
+                <div class="main2_tit">
+                    <p class="tit1">녹아내린 빙하에 숨진 관광객</p>
+                </div>
                 <div class="main2_img"><img src="./assets/images/main2_1.PNG" width="100%" height="100%" alt="the original"></div>
                 <div class="article_txt">
                     <p>
@@ -118,12 +112,9 @@
             
             <!-- 이상 고온과 대규모 산불 -->
             <div class="main2_2">
-                <h1 class="main2_tit" data-aos="fade-up">
-                    <span class="text-wrapper">
-                        <span class="letters" id="t2">이상 고온과 대규모 산불</span>
-                        <span class="line line2" id="l2"></span>
-                    </span>
-                </h1>
+                <div class="main2_tit">
+                    <p class="tit2">이상 고온과 대규모 산불</p>
+                </div>
                 <div class="main2_img"><img src="./assets/images/main2_2.PNG" width="100%" height="100%" alt="the original"></div>
                 <div class="article_txt">
                     <p>
@@ -140,12 +131,9 @@
             
             <!-- 불볕더위에 녹는 채소 -->
             <div class="main2_3">
-                <h1 class="main2_tit" data-aos="fade-up">
-                    <span class="text-wrapper">
-                        <span class="letters" id="t3">불볕더위에 녹는 채소</span>
-                        <span class="line line2" id="l3"></span>
-                    </span>
-                </h1>
+                <div class="main2_tit">
+                    <p class="tit3">불볕더위에 녹는 채소</p>
+                </div>
                 <div class="main2_img"><img src="./assets/images/main2_3.PNG" width="100%" height="100%" alt="the original"></div>
                 <div class="article_txt">
                     <p>
@@ -199,12 +187,13 @@
                 </div>
             </div>
         </section>
+
+        <!-- Main4 -->
+        <section class="main4">
+            <div class="container">
+                <h1 class="last" id="last_txt"></h1>
+            </div>
+        </section>
     </section>
-    <script>
-        AOS.init({
-            easing: 'ease-out-back',
-            duration: 3000
-        });
-    </script>    
 </body>
 </html>
