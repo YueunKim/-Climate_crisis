@@ -110,8 +110,8 @@ body {
 .intro span {
   display: inline-block;
   text-shadow: 0 0 0 whitesmoke;
-  -webkit-animation: smoky 2s 1s both;
-          animation: smoky 2s 1s both;
+  -webkit-animation: smoky 5s 3s both;
+          animation: smoky 5s 3s both;
 }
 .intro span:nth-child(even) {
   -webkit-animation-name: smoky-mirror;
@@ -122,8 +122,8 @@ body {
     text-shadow: 0 0 40px whitesmoke;
   }
   to {
-    -webkit-transform: translate3d(15rem, -8rem, 0) rotate(-50deg) skewX(50deg) scale(2.5);
-            transform: translate3d(15rem, -8rem, 0) rotate(-50deg) skewX(50deg) scale(2.5);
+    -webkit-transform: translate3d(15rem, -8rem, 0) rotate(-40deg) skewX(70deg) scale(1.5);
+            transform: translate3d(15rem, -8rem, 0) rotate(-40deg) skewX(70deg) scale(1.5);
     text-shadow: 0 0 20px whitesmoke;
     opacity: 0;
   }
@@ -133,8 +133,8 @@ body {
     text-shadow: 0 0 40px whitesmoke;
   }
   to {
-    -webkit-transform: translate3d(15rem, -8rem, 0) rotate(-50deg) skewX(50deg) scale(2.5);
-            transform: translate3d(15rem, -8rem, 0) rotate(-50deg) skewX(50deg) scale(2.5);
+    -webkit-transform: translate3d(15rem, -8rem, 0) rotate(-40deg) skewX(70deg) scale(1.5);
+            transform: translate3d(15rem, -8rem, 0) rotate(-40deg) skewX(70deg) scale(1.5);
     text-shadow: 0 0 20px whitesmoke;
     opacity: 0;
   }
@@ -144,8 +144,8 @@ body {
     text-shadow: 0 0 40px whitesmoke;
   }
   to {
-    -webkit-transform: translate3d(18rem, -8rem, 0) rotate(-50deg) skewX(-50deg) scale(2);
-            transform: translate3d(18rem, -8rem, 0) rotate(-50deg) skewX(-50deg) scale(2);
+    -webkit-transform: translate3d(18rem, -8rem, 0) rotate(-40deg) skewX(-70deg) scale(2);
+            transform: translate3d(18rem, -8rem, 0) rotate(-40deg) skewX(-70deg) scale(2);
     text-shadow: 0 0 20px whitesmoke;
     opacity: 0;
   }
@@ -155,8 +155,8 @@ body {
     text-shadow: 0 0 40px whitesmoke;
   }
   to {
-    -webkit-transform: translate3d(18rem, -8rem, 0) rotate(-50deg) skewX(-50deg) scale(2);
-            transform: translate3d(18rem, -8rem, 0) rotate(-50deg) skewX(-50deg) scale(2);
+    -webkit-transform: translate3d(18rem, -8rem, 0) rotate(-40deg) skewX(-70deg) scale(2);
+            transform: translate3d(18rem, -8rem, 0) rotate(-40deg) skewX(-70deg) scale(2);
     text-shadow: 0 0 20px whitesmoke;
     opacity: 0;
   }

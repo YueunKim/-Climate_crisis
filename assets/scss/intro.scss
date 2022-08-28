@@ -55,13 +55,13 @@
     span {
         display: inline-block;
         text-shadow: 0 0 0 whitesmoke;
-        animation: smoky 2s 1s both;
+        animation: smoky 5s 3s both;
     }
     
     span:nth-child(even){
         animation-name: smoky-mirror;
     }
-
+    
     @keyframes smoky {
         60% {
         text-shadow: 0 0 40px whitesmoke;
@@ -69,9 +69,9 @@
         to {
         transform:
             translate3d(15rem,-8rem,0)
-            rotate(-50deg)
-            skewX(50deg)
-            scale(2.5);
+            rotate(-40deg)
+            skewX(70deg)
+            scale(1.5);
         text-shadow: 0 0 20px whitesmoke;
         opacity: 0;
         }
@@ -83,8 +83,8 @@
         to {
         transform:
             translate3d(18rem,-8rem,0)
-            rotate(-50deg) 
-            skewX(-50deg)
+            rotate(-40deg) 
+            skewX(-70deg)
             scale(2);
         text-shadow: 0 0 20px whitesmoke;
         opacity: 0;
