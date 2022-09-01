@@ -44,35 +44,34 @@
 
 
         //main4
-        // function type() {
-        //     new TypeIt('.main4 #last_txt', {
-        //         speed: 200
-        //     })
-        //     .type("당장 행동하지 않으면 다 같이 죽는다", {delay:1000})
-        //     .move(-10)
-        //     .delete(4, {delay:1000})
-        //     .move(+9)
-        //     .delete(2, {delay:1000})
-        //     .type("살 수 있")
-        //     .move(+1)
-        //     .go();
-        // };
-    
-        //main4
         function type() {
-            new TypeIt('#last_txt', {
+            new TypeIt('.last-txt', {
                 speed: 200
             })
-            .type("text text text", {delay:1000})
+            .type("당장 행동하지 않으면 다 같이 죽는다", {delay:1000})
             .move(-10)
             .delete(4, {delay:1000})
             .move(+9)
             .delete(2, {delay:1000})
-            .type("abc")
+            .type("살 수 있")
             .move(+1)
             .go();
         };
-
+    
+        //main4
+        // function type() {
+        //     new TypeIt('.last-txt', {
+        //         speed: 200
+        //     })
+        //     .type("text text text", {delay:1000})
+        //     .move(-10)
+        //     .delete(4, {delay:1000})
+        //     .move(+9)
+        //     .delete(2, {delay:1000})
+        //     .type("abc")
+        //     .move(+1)
+        //     .go();
+        // };
 
     //스크롤 할 때
     window.addEventListener('scroll', () => {
@@ -118,7 +117,7 @@
             if (!step) continue;
             boundingRect = step.getBoundingClientRect().top;
 
-            if (boundingRect > window.innerHeight * 0.7 && 
+            if (boundingRect > window.innerHeight * 0.1 && 
                 boundingRect < window.innerHeight * 0.8) {
                 
                 inactivate();
@@ -129,12 +128,23 @@
         }
 
         //main4
+        const last = document.querySelector('.last');
         const lastElem = document.querySelector('.container');
         const lastOffset = lastElem.getBoundingClientRect().top;
-        if (window.scrollY > lastOffset){
-            lastElem.style.cssText = 'opacity:1; transform: translateY(0);';
-            // type();
-        } else { lastElem.style.cssText = 'opacity:0; transform: translateY(50px);'}
+        console.log(lastOffset);
+        // console.log(lastOffset);
+
+        if (lastOffset < window.scrollY) {
+
+                last.classList.add('last-txt');
+                // setInterval(type(), 1000);
+        }
+
+
+        // if ( lastOffset < 940 ){
+        //     lastElem.style.cssText = 'opacity:1; transform: translateY(0);';
+        //     // type();
+        // } else { lastElem.style.cssText = 'opacity:0; transform: translateY(50px);'}
 
         // lastElem.style.cssText = ( window.scrollY > lastOffset
         //     ? 'opacity:1; transform: translateY(0);'

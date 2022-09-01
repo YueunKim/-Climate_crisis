@@ -1,7 +1,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -13,65 +14,84 @@ body {
 .global-width {
   max-width: 55%;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 0 auto;
   margin-top: 10%;
 }
 
-@keyframes fadein {
+@keyframes fadeout {
   from {
-    opacity: 0;
+    opacity: 1;
   }
   to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeout { /* Safari and Chrome */
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
     opacity: 1;
   }
 }
-@-moz-keyframes fadein { /* Firefox */
-  from {
+@-webkit-keyframes fade { /* Safari and Chrome */
+  0%, 100% {
     opacity: 0;
   }
-  to {
+  50% {
     opacity: 1;
   }
 }
-@-webkit-keyframes fadein { /* Safari and Chrome */
+@-webkit-keyframes up-down {
   from {
-    opacity: 0;
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
   }
   to {
-    opacity: 1;
-  }
-}
-@-o-keyframes fadein { /* Opera */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+    -webkit-transform: translatey(-20px);
+            transform: translatey(-20px);
   }
 }
 @keyframes up-down {
   from {
-    transform: translatey(0px);
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
   }
   to {
-    transform: translatey(-20px);
+    -webkit-transform: translatey(-20px);
+            transform: translatey(-20px);
   }
 }
 .main3 .scroll-graphic {
   position: sticky;
   top: 15%;
-  height: 100vh;
+  height: 100%;
 }
 .main3 .scroll-graphic .graphic-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: auto;
   position: absolute;
   left: 0;
   top: 0;
   opacity: 0;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 .main3 .scroll-graphic .visible {
@@ -79,6 +99,7 @@ body {
 }
 .main3 .scroll-graphic .scene-img {
   opacity: 0.7;
+  width: 100%;
   max-height: 100vh;
 }
 .main3 .scroll-txt {
@@ -91,8 +112,5 @@ body {
   text-align: center;
   background-color: #01050E;
   padding: 2.5rem;
-  margin-bottom: 100vh;
-  box-shadow: black 0 0 3px;
+  margin-bottom: 80vh;
 }
-
-/*# sourceMappingURL=main3.css.map */

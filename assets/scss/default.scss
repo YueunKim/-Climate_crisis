@@ -2,6 +2,7 @@ $head-color: #0E252D;
 $white-color: rgb(242, 241, 241);
 $blue-color: #778E88;
 $bg-color: #01050E;
+
 * {
     padding:0;
     margin:0;
@@ -17,7 +18,7 @@ body{
 .global-width {
     max-width: 55%;
     margin: 0 auto;
-    padding: 3rem;
+    padding: 0 auto;
     margin-top: 10%;
 }
 

@@ -14,24 +14,24 @@ body {
 .global-width {
   max-width: 55%;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 0 auto;
   margin-top: 10%;
 }
 
-@keyframes fadein {
+@keyframes fadeout {
   from {
-    opacity: 0;
+    opacity: 1;
   }
   to {
-    opacity: 1;
+    opacity: 0;
   }
 }
-@-webkit-keyframes fadein { /* Safari and Chrome */
+@-webkit-keyframes fadeout { /* Safari and Chrome */
   from {
-    opacity: 0;
+    opacity: 1;
   }
   to {
-    opacity: 1;
+    opacity: 0;
   }
 }
 @keyframes fade {
