@@ -5,13 +5,7 @@
     .scroll-graphic {
         position: sticky;
         top: 15%;
-        // width: 100vh;
-        height: 100%;
-
-        // img {
-        //     max-width: 100%;
-        //     height: auto;
-        // }
+        height: 100vh;
 
         .graphic-item{
             display: flex;
@@ -33,7 +27,6 @@
         .scene-img{
             opacity: 0.7;
             width: 100%;
-            // height: 100%;
             max-height: 100vh;
         }
     }
@@ -43,15 +36,13 @@
         font-size: 20px;
         color: $white-color;
         position: relative;
-        // margin-top: 40vh;
+        padding-bottom: 1px;
 
         .step {
             text-align: center;
             background-color: $bg-color;
-            padding: 2.5rem;
-            // margin-top: 40vh;
+            padding: 2.5rem 1rem;
             margin-bottom: 80vh;
-            // box-shadow: $white-color 0 0 3px;
         }
     }
 }
