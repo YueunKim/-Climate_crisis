@@ -44,34 +44,34 @@
 
 
         //main4
-        function type() {
-            new TypeIt('.last-txt', {
-                speed: 200
-            })
-            .type("당장 행동하지 않으면 다 같이 죽는다", {delay:1000})
-            .move(-10)
-            .delete(4, {delay:1000})
-            .move(+9)
-            .delete(2, {delay:1000})
-            .type("살 수 있")
-            .move(+1)
-            .go();
-        };
-    
-        //main4
         // function type() {
         //     new TypeIt('.last-txt', {
         //         speed: 200
         //     })
-        //     .type("text text text", {delay:1000})
+        //     .type("당장 행동하지 않으면 다 같이 죽는다", {delay:1000})
         //     .move(-10)
         //     .delete(4, {delay:1000})
         //     .move(+9)
         //     .delete(2, {delay:1000})
-        //     .type("abc")
+        //     .type("살 수 있")
         //     .move(+1)
         //     .go();
         // };
+    
+        //main4
+        function type() {
+            new TypeIt('.last', {
+                speed: 200
+            })
+            .type("text text text", {delay:1000})
+            .move(-10)
+            .delete(4, {delay:1000})
+            .move(+9)
+            .delete(2, {delay:1000})
+            .type("abc")
+            .move(+1)
+            .go();
+        };
 
     //스크롤 할 때
     window.addEventListener('scroll', () => {
@@ -129,14 +129,13 @@
 
         //main4
         const last = document.querySelector('.last');
-        const lastElem = document.querySelector('.container');
-        const lastOffset = lastElem.getBoundingClientRect().top;
-        console.log(lastOffset);
-        // console.log(lastOffset);
+        // const lastElem = document.querySelector('.container');
+        // const lastOffset = lastElem.getBoundingClientRect().top;
+        const lastOffset = last.getBoundingClientRect().top;
 
         if (lastOffset < window.scrollY) {
-
-                last.classList.add('last-txt');
+                type();
+                // last.classList.add('last-txt');
                 // setInterval(type(), 1000);
         }
 

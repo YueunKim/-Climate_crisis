@@ -14,7 +14,7 @@ body {
 .global-width {
   max-width: 55%;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 0 auto;
   margin-top: 10%;
 }
 
