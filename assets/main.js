@@ -46,7 +46,7 @@
         //main4
         // function type() {
         //     new TypeIt('.last-txt', {
-        //         speed: 200
+        //         speed: 100
         //     })
         //     .type("당장 행동하지 않으면 다 같이 죽는다", {delay:1000})
         //     .move(-10)
@@ -61,7 +61,7 @@
         //main4
         function type() {
             new TypeIt('.last', {
-                speed: 200
+                speed: 100
             })
             .type("text text text", {delay:1000})
             .move(-10)
@@ -107,6 +107,15 @@
                 : 'opacity:0; transform: translateX(50px);' );
         });
 
+        //main2 밑줄치기
+        let scroll = window.scrollY;
+        let minusH = window.innerHeight / 10;
+        let high= document.querySelector('#high');
+        let target1 = high.getBoundingClientRect().top;
+        if (scroll > target1 - minusH) {
+            high.classList.add('move');
+        };
+
 
         //main3 
         let step;
@@ -134,7 +143,7 @@
         const lastOffset = last.getBoundingClientRect().top;
 
         if (lastOffset < window.scrollY) {
-                type();
+                // type()
                 // last.classList.add('last-txt');
                 // setInterval(type(), 1000);
         }
