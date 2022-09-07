@@ -108,13 +108,15 @@
         });
 
         //main2 밑줄치기
-        let scroll = window.scrollY;
-        let minusH = window.innerHeight / 10;
-        let high= document.querySelector('#high');
-        let target1 = high.getBoundingClientRect().top;
-        if (scroll > target1 - minusH) {
-            high.classList.add('move');
-        };
+        const highlight = document.getElementsByClassName("article_txt");
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray(".text-highlight").forEach((highlight) => {
+        ScrollTrigger.create({
+            trigger: highlight,
+            start: "-100px center",
+            onEnter: () => highlight.classList.add("active")
+        });
+        });
 
 
         //main3 

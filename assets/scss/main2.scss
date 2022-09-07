@@ -1,5 +1,21 @@
 @import './default.scss';
 
+:root {
+    // --bg-color: hsl(59, 50%, 53%);
+    --bg-main-color: hsl(0, 0%, 92%);
+    --bg-color-highlight: #ACC1D3;;
+    --color-text: hsl(192, 14%, 20%);
+    --color-text-highlight: $white-color;
+    // --page-width: 90ch;
+    --block-font-size: min(max(1.2rem, 4vw), 1.4rem);
+    // --h1-font-size: min(max(2rem, 8vw), 4rem);
+    // --h2-font-size: min(max(2rem, 8vw), 1.5rem);
+    // --padding: 8vmin;
+    --duration: 5s;
+    --ease: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
 .main2_1, .main2_2, .main2_3 {
     display: flex;
     align-items: center;
@@ -48,34 +64,18 @@
     }
 
     //밑줄치기
-    [class*=txt-highlight] {
-        display: inline-block;
-        line-height: inherit;
-        font-weight: inherit;
-        vertical-align: top;
-        position: relative;
-        z-index: 0;
-        padding: 0 10px;
-        overflow: hidden;
+    .text-highlight {
+        background-repeat: no-repeat;
+        background-size: 0% 100%;
+        -webkit-transition: color calc(var(--duration) / 4) var(--ease), background-color calc(var(--duration) / 4) var(--ease), background-size var(--duration) var(--ease);
+        transition: color calc(var(--duration) / 4) var(--ease), background-color calc(var(--duration) / 4) var(--ease), background-size var(--duration) var(--ease);
     }
-    [class*=txt-highlight]::after {
-        content: '';
-        display: block;
-        width: 0;
-        height: 20px;
-        z-index: -1;
-        border-bottom: 20px solid #fce62c;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-    }
-    .move [class*=txt-highlight]::after {
-        animation: highlight 500ms linear;
-        animation-fill-mode: both;
-        animation-delay: 500ms;
-    }
-    @keyframes highlight {
-        0% { width: 0; }
-        100% { width: 100%; }
+    
+    .active {
+        // padding: 0 5px;
+        color: var(--color-text-highlight);
+        background-size: 100% 100%;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bg-color-highlight)), to(var(--bg-color-highlight)));
+        background-image: linear-gradient(var(--bg-color-highlight), var(--bg-color-highlight));
     }
 }

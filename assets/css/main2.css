@@ -14,7 +14,7 @@ body {
 .global-width {
   max-width: 55%;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 0 auto;
   margin-top: 10%;
 }
 
@@ -70,6 +70,16 @@ body {
             transform: translatey(-20px);
   }
 }
+:root {
+  --bg-main-color: hsl(0, 0%, 92%);
+  --bg-color-highlight: #ACC1D3;
+  --color-text: hsl(192, 14%, 20%);
+  --color-text-highlight: $white-color;
+  --block-font-size: min(max(1.2rem, 4vw), 1.4rem);
+  --duration: 5s;
+  --ease: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
 .main2_1, .main2_2, .main2_3 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,4 +128,16 @@ body {
 }
 .main2_1 .article_txt p, .main2_2 .article_txt p, .main2_3 .article_txt p {
   margin-bottom: 1em;
+}
+.main2_1 .text-highlight, .main2_2 .text-highlight, .main2_3 .text-highlight {
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  -webkit-transition: color calc(var(--duration) / 4) var(--ease), background-color calc(var(--duration) / 4) var(--ease), background-size var(--duration) var(--ease);
+  transition: color calc(var(--duration) / 4) var(--ease), background-color calc(var(--duration) / 4) var(--ease), background-size var(--duration) var(--ease);
+}
+.main2_1 .active, .main2_2 .active, .main2_3 .active {
+  color: var(--color-text-highlight);
+  background-size: 100% 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bg-color-highlight)), to(var(--bg-color-highlight)));
+  background-image: linear-gradient(var(--bg-color-highlight), var(--bg-color-highlight));
 }
