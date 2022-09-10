@@ -3,15 +3,13 @@
 :root {
     // --bg-color: hsl(59, 50%, 53%);
     --bg-main-color: hsl(0, 0%, 92%);
-    --bg-color-highlight: #ACC1D3;;
+    --bg-color-highlight-1: #5E7B8F;
+    --bg-color-highlight-2: #A6471D;
+    --bg-color-highlight-3: #58692C;
     --color-text: hsl(192, 14%, 20%);
     --color-text-highlight: $white-color;
-    // --page-width: 90ch;
     --block-font-size: min(max(1.2rem, 4vw), 1.4rem);
-    // --h1-font-size: min(max(2rem, 8vw), 4rem);
-    // --h2-font-size: min(max(2rem, 8vw), 1.5rem);
-    // --padding: 8vmin;
-    --duration: 5s;
+    --duration: 1s;
     --ease: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -21,7 +19,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 20%;
+    margin-bottom: 50%;
 
     .main2_img {
         margin-top: 3rem;
@@ -64,6 +62,17 @@
     }
 
     //밑줄치기
+    // .text-highlight {
+    //     display: inline;
+    //     position: relative;
+    //     background-repeat: no-repeat;
+    //     background-size: 0% 100%;
+    //     background-image: linear-gradient(to right, #E6712E, #E6712E);
+    //     transition: background-size 0.5s ease;
+    //     padding: 3px;
+    //     line-height: 1.5;
+    // }
+
     .text-highlight {
         background-repeat: no-repeat;
         background-size: 0% 100%;
@@ -71,11 +80,24 @@
         transition: color calc(var(--duration) / 4) var(--ease), background-color calc(var(--duration) / 4) var(--ease), background-size var(--duration) var(--ease);
     }
     
-    .active {
-        // padding: 0 5px;
+    .active1 {
         color: var(--color-text-highlight);
         background-size: 100% 100%;
-        background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bg-color-highlight)), to(var(--bg-color-highlight)));
-        background-image: linear-gradient(var(--bg-color-highlight), var(--bg-color-highlight));
+        background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bg-color-highlight-1)), to(var(--bg-color-highlight-1)));
+        background-image: linear-gradient(var(--bg-color-highlight-1), var(--bg-color-highlight-1));
+    }
+
+    .active2 {
+        color: var(--color-text-highlight);
+        background-size: 100% 100%;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bg-color-highlight-2)), to(var(--bg-color-highlight-2)));
+        background-image: linear-gradient(var(--bg-color-highlight-2), var(--bg-color-highlight-2));
+    }
+
+    .active3{
+        color: var(--color-text-highlight);
+        background-size: 100% 100%;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bg-color-highlight-3)), to(var(--bg-color-highlight-3)));
+        background-image: linear-gradient(var(--bg-color-highlight-3), var(--bg-color-highlight-3));
     }
 }

@@ -24,6 +24,14 @@
         currentItem.classList.remove('visible');
     }
 
+    //main2 글자 하이라이트
+    const highlightElems = document.querySelectorAll('.text-highlight');
+    for (let i = 0; i < highlightElems.length; i++) {
+        highlightElems[i].dataset.index = i;
+    }
+
+
+
 
     // //main4
     // function type() {
@@ -107,15 +115,56 @@
                 : 'opacity:0; transform: translateX(50px);' );
         });
 
-        //main2 밑줄치기
+        //main2 글자 하이라이트
+        // gsap.registerPlugin(ScrollTrigger);
+        // gsap.utils.toArray(".text-highlight").forEach((highlight) => {
+        // const tl = gsap.timeline({
+        // scrollTrigger: {
+        //     trigger: highlight,
+        //     scrub: true,
+        //     // markers: true,
+        //     start: "50% bottom",
+        //     end: "100%",
+        // }
+        // })
+        // tl.to(highlight, 
+        //     {
+        //     backgroundSize: "100% 100%", 
+        //     // autoRound:false, 
+        //     }
+        // )
+        // });
+
         const highlight = document.getElementsByClassName("article_txt");
         gsap.registerPlugin(ScrollTrigger);
         gsap.utils.toArray(".text-highlight").forEach((highlight) => {
-        ScrollTrigger.create({
-            trigger: highlight,
-            start: "-100px center",
-            onEnter: () => highlight.classList.add("active")
-        });
+            // console.log(highlight.dataset.index);
+            if (highlight.dataset.index == 0 || highlight.dataset.index == 1){
+                ScrollTrigger.create({
+                    trigger: highlight,
+                    start: "-100px center",
+                    scrub: 1,
+                    onEnter: () => highlight.classList.add("active1")
+                    
+                });
+            } else if (highlight.dataset.index == 2 || highlight.dataset.index == 3){
+                ScrollTrigger.create({
+                    trigger: highlight,
+                    start: "-100px center",
+                    scrub: 1,
+                    onEnter: () => highlight.classList.add("active2")
+                    
+                });
+            } else {
+                ScrollTrigger.create({
+                    trigger: highlight,
+                    start: "-100px center",
+                    scrub: 1,
+                    onEnter: () => highlight.classList.add("active3")
+                    
+                });
+            }
+        
         });
 
 
