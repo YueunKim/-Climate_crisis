@@ -1,5 +1,11 @@
 (() => {
 
+    //main2 글자 하이라이트
+    const highlightElems = document.querySelectorAll('.text-highlight');
+    for (let i = 0; i < highlightElems.length; i++) {
+        highlightElems[i].dataset.index = i;
+    }
+    
     //main3 사진에 따라 텍스트 올라오기
     const stepElems = document.querySelectorAll('.step');
     const graphicElems = document.querySelectorAll('.graphic-item');
@@ -24,11 +30,6 @@
         currentItem.classList.remove('visible');
     }
 
-    //main2 글자 하이라이트
-    const highlightElems = document.querySelectorAll('.text-highlight');
-    for (let i = 0; i < highlightElems.length; i++) {
-        highlightElems[i].dataset.index = i;
-    }
 
 
 
@@ -115,30 +116,11 @@
                 : 'opacity:0; transform: translateX(50px);' );
         });
 
-        //main2 글자 하이라이트
-        // gsap.registerPlugin(ScrollTrigger);
-        // gsap.utils.toArray(".text-highlight").forEach((highlight) => {
-        // const tl = gsap.timeline({
-        // scrollTrigger: {
-        //     trigger: highlight,
-        //     scrub: true,
-        //     // markers: true,
-        //     start: "50% bottom",
-        //     end: "100%",
-        // }
-        // })
-        // tl.to(highlight, 
-        //     {
-        //     backgroundSize: "100% 100%", 
-        //     // autoRound:false, 
-        //     }
-        // )
-        // });
 
+        //main2 글자 하이라이트
         const highlight = document.getElementsByClassName("article_txt");
         gsap.registerPlugin(ScrollTrigger);
         gsap.utils.toArray(".text-highlight").forEach((highlight) => {
-            // console.log(highlight.dataset.index);
             if (highlight.dataset.index == 0 || highlight.dataset.index == 1){
                 ScrollTrigger.create({
                     trigger: highlight,
@@ -168,7 +150,7 @@
         });
 
 
-        //main3 
+        //main3 사진에 따라 텍스트 올라오기
         let step;
         let boundingRect;
 
@@ -187,7 +169,7 @@
             }
         }
 
-        //main4
+        //main4 typeit기능
         const last = document.querySelector('.last');
         // const lastElem = document.querySelector('.container');
         // const lastOffset = lastElem.getBoundingClientRect().top;

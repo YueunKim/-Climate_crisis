@@ -68,7 +68,7 @@ body {
 .main3 .scroll-graphic {
   position: -webkit-sticky;
   position: sticky;
-  top: 15%;
+  top: 10%;
   height: 100vh;
 }
 .main3 .scroll-graphic .graphic-item {
