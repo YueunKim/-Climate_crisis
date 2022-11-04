@@ -32,8 +32,6 @@
 
 
 
-
-
     // //main4
     // function type() {
     //     document.addEventListener('DOMContentLoaded',() => {
@@ -66,21 +64,48 @@
         //     .move(+1)
         //     .go();
         // };
-    
-        //main4
-        function type() {
-            new TypeIt('.last', {
-                speed: 100
-            })
-            .type("text text text", {delay:1000})
-            .move(-10)
-            .delete(4, {delay:1000})
-            .move(+9)
-            .delete(2, {delay:1000})
-            .type("abc")
-            .move(+1)
-            .go();
-        };
+
+
+
+    //main4
+    function type() {
+        new TypeIt('#type', {
+            speed: 100
+        })
+        .type("text text text", {delay:1000})
+        .move(-10)
+        .delete(4, {delay:1000})
+        .move(+9)
+        .delete(2, {delay:1000})
+        .type("abc")
+        .move(+1)
+        .go();
+    };
+
+    // function checkVisible( elm, eval ) {
+    //     eval = eval || "object visible";
+    //     let viewportHeight = window.innerHeight; // Viewport Height
+    //     // let viewportHeight = $(window).height(); // Viewport Height
+    //     let scrolltop = window.scrollY; // Scroll Top
+    //     // let scrolltop = $(window).scrollTop(); // Scroll Top
+    //     let y = elm.offsetTop;
+    //     // console.log(y)
+    //     // let y = $(elm).offset().top;
+    //     let elementHeight = elm.offsetHeight;
+    //     // console.log(elementHeight)
+    //     // let elementHeight = $(elm).height();
+        
+    //     if (eval == "object visible") {
+    //         return ((y < (viewportHeight + scrolltop)) && (y > (scrolltop - elementHeight)));
+    //     }
+    //     if (eval == "above") {
+    //         return ((y < (viewportHeight + scrolltop)));
+    //     }
+    // };
+
+
+
+
 
     //스크롤 할 때
     window.addEventListener('scroll', () => {
@@ -170,16 +195,35 @@
         }
 
         //main4 typeit기능
-        const last = document.querySelector('.last');
+        // type();
+
+        // let isVisible = false;
+        // let el = document.querySelector('#second');
+        // if (checkVisible(el, !isVisible)){
+        //     type();
+        //     isVisible = true;
+        // }
+
+
+        let el = document.querySelector('#type');
+        const elOffset = el.getBoundingClientRect().top + window.pageYOffset - 800;
+        if (window.scrollY > elOffset){
+            let timer = setTimeout( type, 1500 );
+            clearTimeout(timer);
+        }
+
+
+
+        // const last = document.querySelector('.last');
         // const lastElem = document.querySelector('.container');
         // const lastOffset = lastElem.getBoundingClientRect().top;
-        const lastOffset = last.getBoundingClientRect().top;
+        // const lastOffset = last.getBoundingClientRect().top;
 
-        if (lastOffset < window.scrollY) {
+        // if (lastOffset < window.scrollY) {
                 // type()
                 // last.classList.add('last-txt');
                 // setInterval(type(), 1000);
-        }
+        // }
 
 
         // if ( lastOffset < 940 ){

@@ -71,8 +71,9 @@ body {
   font-family: "Song Myung", serif;
   font-size: 3.5rem;
   color: rgb(242, 241, 241);
-  margin-top: 20%;
-  margin-bottom: 50%;
-  transform: translatey(10px);
-  transition: all 1s;
+}
+.main4 .container #type {
+  height: 100px;
+  background: none repeat scroll 0 0 rgb(174, 174, 218);
+  border: 5px solid black;
 }
