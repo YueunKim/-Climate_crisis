@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 (() => {
 
     //main2 글자 하이라이트
