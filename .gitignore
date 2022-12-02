@@ -5,7 +5,3 @@ node_modules/
 assets/images/
 assets/scss
 static/
-/package-lock.json
-/package.json
-/.babelrc.js
-/.postcssre.js
