@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  scroll-behavior: smooth;
+  background-color: #01050E;
+}
+
+.global-width {
+  max-width: 55%;
+  margin: 0 auto;
+  padding: 0 auto;
+  margin-top: 10%;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeout { /* Safari and Chrome */
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade { /* Safari and Chrome */
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes up-down {
+  from {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  to {
+    -webkit-transform: translatey(-20px);
+            transform: translatey(-20px);
+  }
+}
+@keyframes up-down {
+  from {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  to {
+    -webkit-transform: translatey(-20px);
+            transform: translatey(-20px);
+  }
+}
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0E252D;
+  font-family: "Song Myung", serif;
+  padding: 16px 32px 16px;
+}
+.header .header_donga .btn_donga {
+  position: absolute;
+  top: 29px;
+  left: 27px;
+  cursor: pointer;
+}
+.header .header_donga .btn_original {
+  position: absolute;
+  top: 25px;
+  left: 129px;
+  cursor: pointer;
+}
+.header .header_share .btn_share {
+  padding-right: 20px;
+  cursor: pointer;
+}
+.header .header_share .btn_reply {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=/header.f8e54ffb.css.map */

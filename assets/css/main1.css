@@ -79,16 +79,29 @@ body {
   justify-content: center;
   flex-direction: column;
   color: rgb(242, 241, 241);
-  font-size: 20px;
+  font-size: 1.3em;
 }
 .main1 .article_txt p {
   margin-bottom: 1em;
 }
-.main1 .article_txt .txt_up {
+.main1 .article_txt_up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgb(242, 241, 241);
+  font-size: 1.5em;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  margin-top: 40%;
+  margin-bottom: 40%;
+}
+.main1 .article_txt_up #txt_up {
   opacity: 0;
   font-size: 3.5rem;
-  margin-top: 80%;
-  margin-bottom: 80%;
-  transform: translatey(100px);
-  transition: all 2s;
+  margin-top: 10%;
+  transform: translate(0, 100px);
+  transition: all 1s;
 }

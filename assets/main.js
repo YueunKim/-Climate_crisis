@@ -70,19 +70,19 @@ import _ from 'lodash';
 
 
     //main4
-    function type() {
-        new TypeIt('#type', {
-            speed: 100
-        })
-        .type("text text text", {delay:1000})
-        .move(-10)
-        .delete(4, {delay:1000})
-        .move(+9)
-        .delete(2, {delay:1000})
-        .type("abc")
-        .move(+1)
-        .go();
-    };
+    // function type() {
+    //     new TypeIt('#type', {
+    //         speed: 100
+    //     })
+    //     .type("text text text", {delay:1000})
+    //     .move(-10)
+    //     .delete(4, {delay:1000})
+    //     .move(+9)
+    //     .delete(2, {delay:1000})
+    //     .type("abc")
+    //     .move(+1)
+    //     .go();
+    // };
 
     // function checkVisible( elm, eval ) {
     //     eval = eval || "object visible";
@@ -121,14 +121,23 @@ import _ from 'lodash';
         
 
         //main1 글자 올라오기
-        const txtupElem = document.querySelector('.txt_up');
+        const txtupElem = document.querySelector('#txt_up');
         const txtupOffset = txtupElem.getBoundingClientRect().top + window.pageYOffset - 800;
         txtupElem.style.cssText = ( window.scrollY > txtupOffset
-            ? 'opacity:1; transform: translatey(0px);'
-            : 'opacity:0; transform: translatey(100px);' );
+            ? 'opacity:1; transform: translate3d(0px, 0px, 0px);'
+            : 'opacity:0; transform: translate(0px, 100px);' );
+        // txtupElem.style.cssText = (
+        //     if (window.scrollY > txtupOffset) {
+        //         'opacity:1; transform: translate3d(0px, 0px, 0px);'
+        //         }
+        //     else if (window.scrollY == txtupOffset) {
+        //         'opacity:0.3; transform: translate3d(0px, 70px, 0px);'
+        //     }
+        //     else {
+        //         'opacity:0; transform: translate(0px, 100px);' 
+        //     } );
 
-
-        //main2 타이틀 올라오기
+        //main2 타이틀 옆에서 나타나기
         const titleElem = document.querySelectorAll('.main2_tit');
         let eleOffsetArr = [];
 
@@ -175,6 +184,13 @@ import _ from 'lodash';
             }
         
         });
+
+        //main2 sticky
+        // const main21Elem = document.querySelector('.main2_1');
+        // const main21Offset = main21Elem.getBoundingClientRect().top + window.pageYOffset - 800;
+        // main21Elem.style.cssText = ( window.scrollY * 0.1 < main21Offset && window.scrollY * 0.8 > main21Offset
+        //     ? 'position: sticky; top: 5%;'
+        //     : 'position: static;' );
 
 
         //main3 사진에 따라 텍스트 올라오기

@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  scroll-behavior: smooth;
+  background-color: #01050E;
+}
+
+.global-width {
+  max-width: 55%;
+  margin: 0 auto;
+  padding: 0 auto;
+  margin-top: 10%;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeout { /* Safari and Chrome */
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade { /* Safari and Chrome */
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes up-down {
+  from {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  to {
+    -webkit-transform: translatey(-20px);
+            transform: translatey(-20px);
+  }
+}
+@keyframes up-down {
+  from {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  to {
+    -webkit-transform: translatey(-20px);
+            transform: translatey(-20px);
+  }
+}
+.main3 .scroll-graphic {
+  position: sticky;
+  top: 10%;
+  height: 100vh;
+}
+.main3 .scroll-graphic .graphic-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.main3 .scroll-graphic .visible {
+  opacity: 1;
+}
+.main3 .scroll-graphic .scene-img {
+  opacity: 0.7;
+  width: 100%;
+  max-height: 100vh;
+}
+.main3 .scroll-txt {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  color: rgb(242, 241, 241);
+  position: relative;
+  padding-bottom: 1px;
+}
+.main3 .scroll-txt .step {
+  text-align: center;
+  background-color: #01050E;
+  padding: 2.5rem 1rem;
+  margin-bottom: 80vh;
+}
+
+/*# sourceMappingURL=/main3.19c9c8ba.css.map */
