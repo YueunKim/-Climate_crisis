@@ -11,7 +11,8 @@
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-CC6699.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![parcel](https://img.shields.io/badge/parcel-000000.svg?style=for-the-badge&logo=parcel&logoColor=white)
 
 ## 🔎 Meaning
 * 인터랙티브 웹에 대한 관심을 바탕으로 기획부터 개발까지 처음으로 혼자 구현해본 인터랙티브 웹입니다.
