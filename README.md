@@ -3,7 +3,7 @@
 ## 📑 About
 * 개발 인원 : 1명
 * 개발 기간 : 2022.08
-* URL : https://yueunkim.github.io/Climate_crisis/
+* URL : https://yueunkim.github.io/Climate_crisis/dist/index.html
 
 ## ❓ Why
 * 기후 위기에 대한 세계적인 관심이 필요한 요즘, 동아일보의 인터랙티브 뉴스를 보고 영감을 받아 사람들에게 기후 위기에 대한 경각심을 알리고자 다양한 기사와 뉴스를 기반으로 제작했습니다.  
